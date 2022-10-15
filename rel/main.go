@@ -8,7 +8,7 @@ import (
 	"os"
 
 	"github.com/go-rel/cmd/rel/internal"
-	"github.com/joho/godotenv"
+	"github.com/subosito/gotenv"
 )
 
 var (
@@ -17,7 +17,7 @@ var (
 
 func main() {
 	log.SetFlags(0)
-	godotenv.Load()
+	gotenv.Load()
 
 	var (
 		err error
