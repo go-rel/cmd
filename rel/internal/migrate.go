@@ -35,7 +35,7 @@ var (
 	shutdowns []func() error
 )
 
-func logger(ctx context.Context, op string, message string) func(err error) {
+func logger(ctx context.Context, op string, message string, args ...interface{}) func(err error) {
 	// no op for rel functions.
 	if strings.HasPrefix(op, "rel-") {
 		return func(error) {}
