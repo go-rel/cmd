@@ -21,7 +21,7 @@ jobs:
         with:
           go-version: ${{ matrix.go }}
       - name: Check out code into the Go module directory
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - run: go test -race ./...
 
   cli:
@@ -39,10 +39,10 @@ jobs:
         with:
           go-version: ${{ matrix.go }}
       - name: Check out code into the Go module directory
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - run: go install ./rel
       - name: Check out code into the Go module directory
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           repository: Fs02/go-todo-backend
           path: project
@@ -62,7 +62,7 @@ jobs:
       - name: Set up Go 1.x
         uses: actions/setup-go@v3
       - name: Check out code into the Go module directory
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           fetch-depth: 2
       - run: go test -race -tags=all -coverprofile=coverage.txt -covermode=atomic ./...
