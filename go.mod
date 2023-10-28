@@ -4,7 +4,7 @@ go 1.19
 
 require (
 	github.com/serenize/snaker v0.0.0-20201027110005-a7ad2135616e
-	github.com/stretchr/testify v1.8.2
+	github.com/stretchr/testify v1.8.4
 	github.com/subosito/gotenv v1.6.0
 )
 
